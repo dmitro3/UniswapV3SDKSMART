@@ -289,7 +289,21 @@ export const USDC_POLYGON = new Token(
   'USDC',
   'USD//C'
 );
+export const WXPL_PLASMA = new Token(
+  ChainId.PLASMA,
+  '0x6100E367285b01F48D07953803A2d8dCA5D19873',
+  18,
+  'WXPL',
+  'Wrapped XPL'
+);
 
+export const USDT0_PLASMA = new Token(
+  ChainId.PLASMA,
+  '0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb',
+  6,
+  'USDT0',
+  'USD//C'
+);
 export const DAI_POLYGON = new Token(
   ChainId.POLYGON,
   '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063',
@@ -756,6 +770,8 @@ export const USDT_ON = (chainId: ChainId): Token => {
       return USDT_OPTIMISM_GOERLI;
     case ChainId.ARBITRUM_ONE:
       return USDT_ARBITRUM;
+    case ChainId.PLASMA:
+      return USDT0_PLASMA;	  
     case ChainId.BNB:
       return USDT_BNB;
     default:
